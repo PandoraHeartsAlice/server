@@ -18,7 +18,7 @@ const port = 5000;
 
 // Настройка CORS
 const corsOptions = {
-  origin: ["*"],
+  origin: "*",
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
