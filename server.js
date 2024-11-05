@@ -20,7 +20,7 @@ const port = 5000;
 
 // Настройка CORS
 const corsOptions = {
-  origin: ["https://edmwire.ru", "https://server.edmwire.ru"],
+  origin: ["*"],
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
@@ -109,13 +109,6 @@ app.post("/submit", (req, res) => {
 app.get("/", (req, res) => {
   res.status(200).send("Сервер работает!");
 });
-
-// Настройка HTTPS
-const options = {
-  key: fs.readFileSync("./sslserv/certificate.key"), // Укажите путь к вашему Private Key
-  cert: fs.readFileSync("./sslserv/certificate.crt"), // Укажите путь к вашему сертификату
-  ca: fs.readFileSync("./sslserv/certificate_ca.crt"), // Укажите путь к вашему корневому сертификату (если требуется)
-};
 
 // Запуск HTTPS-сервера
 https.createServer(options, app).listen(port, () => {
