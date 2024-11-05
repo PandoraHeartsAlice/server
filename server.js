@@ -2,8 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-const https = require("https");
-const fs = require("fs");
 const cors = require("cors");
 const session = require("express-session");
 
@@ -35,7 +33,7 @@ app.use(
     secret: "your-secret-key",
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: true },
+    cookie: { secure: false }, // Установите secure в false, если используете HTTP
   })
 );
 
@@ -110,7 +108,7 @@ app.get("/", (req, res) => {
   res.status(200).send("Сервер работает!");
 });
 
-// Запуск HTTPS-сервера
-https.createServer(options, app).listen(port, () => {
+// Запуск HTTP-сервера
+app.listen(port, () => {
   console.log(`Сервер успешно запущен на порту ${port}`);
 });
