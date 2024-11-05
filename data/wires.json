@@ -1,0 +1,37 @@
+{
+  "wires": [
+    {
+      "id": "112321",
+      "name": "Molibden",
+      "firm": "Molibden-4",
+      "model": "MolibdenPSP-s",
+      "peculiarities": "",
+      "img": "/img/wire.jpg",
+      "price": 800,
+      "discount": { "hasDiscount": true, "amount": 10 },
+      "isPopular": true
+    },
+    {
+      "id": "23333",
+      "name": "Molibden-2",
+      "firm": "Molibden-5",
+      "model": "MolibdenPSP-s",
+      "peculiarities": "",
+      "img": "/img/wire.jpg",
+      "price": 700,
+      "discount": { "hasDiscount": true, "amount": 10 },
+      "isPopular": true
+    },
+    {
+      "id": "233313",
+      "name": "Molibden-21",
+      "firm": "Molibden-52",
+      "model": "MolibdenPSP-s3",
+      "peculiarities": "",
+      "img": "/img/wire.jpg",
+      "price": 700,
+      "discount": { "hasDiscount": false, "amount": 10 },
+      "isPopular": false
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "resins": [
+    {
+      "id": "12223",
+      "name": "Смола",
+      "firm": "Фирма",
+      "model": "Тех название",
+      "peculiarities": "",
+      "img": "/img/resin.jpg",
+      "price": 700,
+      "discount": { "hasDiscount": false, "amount": 10 },
+      "isPopular": false
+    },
+    {
+      "id": "1123",
+      "name": "Смола",
+      "firm": "Фирма",
+      "model": "Тех название",
+      "peculiarities": "",
+      "img": "/img/resin.jpg",
+      "price": 800,
+      "discount": { "hasDiscount": false, "amount": 10 },
+      "isPopular": false
+    }
+  ]
+}

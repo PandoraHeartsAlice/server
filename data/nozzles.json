@@ -1,0 +1,38 @@
+{
+  "nozzles": [
+    {
+      "id": "223123232",
+      "name": "Charmil CU32T",
+      "firm": "Agie-3",
+      "model": "Charmilles CU32T 20qesw",
+      "size": [320, 550],
+      "machineModels": [
+        "Charmilles CUT 20",
+        "Charmilles CUT 20S",
+        "Charmilles CUT 20W"
+      ],
+      "peculiarities": "",
+      "img": "/img/nozzles.jpg",
+      "price": 13000,
+      "discount": { "hasDiscount": false, "amount": 10 },
+      "isPopular": false
+    },
+    {
+      "id": "1763212589",
+      "name": "Charmil CU32sT",
+      "firm": "Agie-s3",
+      "model": "Charmilles CU32T 20qessw",
+      "size": [320, 550],
+      "machineModels": [
+        "Charmilles CUT 20",
+        "Charmilles CUT 20S",
+        "Charmilles CUT 20W"
+      ],
+      "peculiarities": "",
+      "img": "/img/nozzles.jpg",
+      "price": 13000,
+      "discount": { "hasDiscount": false, "amount": 10 },
+      "isPopular": false
+    }
+  ]
+}
