@@ -83,11 +83,11 @@ app.post("/submit", (req, res) => {
   const { name, email, phone, items, total } = req.body;
 
   console.log("Полученные данные заказа:", req.body); // Логируйте полученные данные
-
+  const apiUrl = import.meta.env.YANDEX_EMAIL;
   transporter.sendMail(
     {
-      from: `"Имя отправителя" <${process.env.YANDEX_EMAIL}>`,
-      to: process.env.YANDEX_EMAIL, // исправлено на использование переменной
+      from: `"Имя отправителя" <${apiUrl}>`,
+      to: apiUrl,
       subject: "Новый заказ",
       text: `Поступил новый заказ от ${name}, email клиента: ${email}. Сумма заказа: ${total}.`,
       html: `<b>Поступил новый заказ от ${name},</b><p>email клиента: ${email}.</p><p>Сумма заказа: ${total}.</p>`,
