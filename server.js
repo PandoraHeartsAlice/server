@@ -74,16 +74,16 @@ let transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: process.env.YANDEX_EMAIL, // ваш email на Yandex
-    pass: process.env.YANDEX_PASSWORD, // ваш пароль на Yandex
+    user: "powerman.2003@yandex.ru", // ваш email на Yandex
+    pass: "228PAROL228", // ваш пароль на Yandex
   },
 });
 
 app.post("/submit", (req, res) => {
   const { name, email, phone, items, total } = req.body;
 
-  console.log("Полученные данные заказа:", req.body); // Логируйте полученные данные
-  const apiUrl = import.meta.env.YANDEX_EMAIL;
+  console.log("Полученные данные заказа:", req.body);
+  const apiUrl = "powerman.2003@yandex.ru";
   transporter.sendMail(
     {
       from: `"Имя отправителя" <${apiUrl}>`,
@@ -94,7 +94,7 @@ app.post("/submit", (req, res) => {
     },
     (error, info) => {
       if (error) {
-        console.log("Ошибка при отправке электронной почты:", error); // Логируйте ошибку
+        console.log("Ошибка при отправке электронной почты:", error);
         return res.status(500).json({ message: "Ошибка при отправке письма" });
       }
       console.log("Сообщение отправлено: %s", info.messageId);
