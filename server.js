@@ -85,7 +85,7 @@ app.post("/submit", (req, res) => {
   transporter.sendMail(
     {
       from: `"Имя отправителя" <${process.env.YANDEX_EMAIL}>`,
-      to: "powerman.2003@yandex.ru", // ваш фиксированный адрес получателя
+      to: "process.env.YANDEX_EMAIL", // ваш фиксированный адрес получателя
       subject: "Новый заказ",
       text: `Поступил новый заказ от ${name}, email клиента: ${email}. Сумма заказа: ${total}.`,
       html: `<b>Поступил новый заказ от ${name},</b><p>email клиента: ${email}.</p><p>Сумма заказа: ${total}.</p>`,
@@ -108,7 +108,6 @@ app.get("/", (req, res) => {
   res.status(200).send("Сервер работает!");
 });
 
-// Запуск HTTP-сервера
 app.listen(port, () => {
   console.log(`Сервер успешно запущен на порту ${port}`);
 });
